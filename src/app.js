@@ -12,13 +12,18 @@ window.onload = function() {
   let noun = ["jogger", "racoon"];
   let extensions = [".com", ".net", ".pt", ".io"];
 
+  let combinations = [];
+
   for (let pronoun of pronoun) {
     for (let adj of adj) {
       for (let noun of noun) {
         for (let extensions of extensions) {
-          console.log(pronoun + adj + noun + extensions);
+          let combination = pronoun + adj + noun + extensions;
+          combinations.push(combination);
         }
       }
     }
   }
+
+  console.log(combinations);
 };
